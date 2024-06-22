@@ -1,0 +1,10 @@
+keon/algorithms
+wting/autojump
+onng/ddia
+lm-sys/FastChat
+sebastianruder/NLP-progress
+OpenDevin/OpenDevin
+facebook/prophet
+faif/python-patterns
+twintproject/twint
+tiangolo/typer
