@@ -20,24 +20,13 @@ import subprocess
 import requests
 
 
-groups = {
-        'MANAGEMENT': [ #gerenciamento / documentação
-            "explain", "readme", "section", "directory", "tidy", "docs", "page", "adopt", "bump", "changelog", "clean", "code review", "comment",
-            "copyright", "documentation", "document", "format", "formatting", "dependencies","resume",
-            "integrat", "javadoc", "license", "maintenance", "manual", "merge",
-            "organiz", "polish", "readme", "repository", "docker",
-            "structure", "style", "TODO", "upgrade", "install", "pystan", "describe", "require", "note", "typo", "spelling", "pep8", "installation",
-            "recommend", "set", "requirements", "gitignore", "git","instructions", "translate", "guide", "updating", "auto", "specify", "annotated",
-            "MD", ".md", "ignoring", "ignore", "numbering", "merging", "tweak", "mark dev", "mark version"
-        ],
-        'CORRECTIVE_ENGINEERING': [ #correção,
-            "broke", "bug", "appease", "send", "correct", "deprecat", "error", "fixed", "fix", "handle",
-            "harmonize", "issue", "kill", "penalty", "proper", "reduce", "repair", "revise",
-            "avoid", "convert", "clear","custom", "need", "compatible", "conflicts", "reversed", "wrong", "exception", "go back", "workaround", #gambiarra
-            "resolve", "put"
-
-        ],
-        'FORWARD_ENGINEERING': [ #novas funcionalidades ou melhorias #engenharia incremental
+groups = { 
+            'RELEASES': [ "release",
+            r"(?i)release\s*[\d.]+",  # Captura "release x.x.x"
+            r"(?i)version\s*[\d.]+",  # Captura "version x.x.x"
+            r"(?i)v?\d+\.\d+\.\d+(?:[-\w\d]*\.\d+)?",  # Captura "v1.2.3", "1.2.3", "1.2.3-alpha.4"
+         ],
+            'FORWARD_ENGINEERING': [ #novas funcionalidades ou melhorias #engenharia incremental
             "add", "added", "wip", "convert", "safely", "display", "translation", "api", "solution",
             "hotkeys", "Buffering", "separate", "adding", "allow", "anchor", "build", "button", "cache",
             "catch", "check", "command", "compiler", "completed", "configurable",
@@ -51,7 +40,23 @@ groups = {
             "seasonality", "stan model", "trends", "wheels", "expose", "raise", "regressors", "transition", "scrape",
             "prototype", "path", "alternative approach"
         ],
-        'REENGINEERING': [ #refatoração #otimização
+            'CORRECTIVE_ENGINEERING': [ #correção,
+            "broke", "bug", "appease", "send", "correct", "deprecat", "error", "fixed", "fix", "handle",
+            "harmonize", "issue", "kill", "penalty", "proper", "reduce", "repair", "revise",
+            "avoid", "convert", "clear","custom", "need", "compatible", "conflicts", "reversed", "wrong", "exception", "go back", "workaround", #gambiarra
+            "resolve", "put"
+
+        ],
+        'MANAGEMENT': [ #gerenciamento / documentação
+            "explain", "readme", "section", "directory", "tidy", "docs", "page", "adopt", "bump", "changelog", "clean", "code review", "comment",
+            "copyright", "documentation", "document", "format", "formatting", "dependencies","resume",
+            "integrat", "javadoc", "license", "maintenance", "manual", "merge",
+            "organiz", "polish", "readme", "repository", "docker",
+            "structure", "style", "TODO", "upgrade", "install", "pystan", "describe", "require", "note", "typo", "spelling", "pep8", "installation",
+            "recommend", "set", "requirements", "gitignore", "git","instructions", "translate", "guide", "updating", "auto", "specify", "annotated",
+            "MD", ".md", "ignoring", "ignore", "numbering", "merging", "tweak", "mark dev", "mark version"
+        ],
+            'REENGINEERING': [ #refatoração #otimização
             "adjust", "migrat", "switch", "better", "best", "blocked", "chang", "combine", "consolidate", "decreased", "speed"
             "delete", "del", "deleting", "design", "change", "duplicat", "eliminat", "enhance", "enhanced",
             "extend", "import", "improv", "made", "make", "miss", "modif", "move", "force",
@@ -61,16 +66,12 @@ groups = {
             "regenerate", "styling", "speed", "optimize", "encode", "enabl", "disabl", "compatibility", "removal", "purification", "->", "overwrite", "Strip",
             "rised", "adapted", "instead", "rewritten", "standart", "standardization", "yamlized", "reorganising", "re-", "re-*", "redefine","edit",
             "backtrack"
-        ],
+        ],        
         'TESTS': [
             "assert", "eval", "example", "examples", "test", "tests", "verify",
             "unittest", "pytest", "check", "validate", "validation", "travis", "run"     #TRAVIS ferramenta de IC/CD
-        ],
-        'RELEASES': [ "release",
-        r"(?i)release\s*[\d.]+",  # Captura "release x.x.x"
-        r"(?i)version\s*[\d.]+",  # Captura "version x.x.x"
-        r"(?i)v?\d+\.\d+\.\d+(?:[-\w\d]*\.\d+)?",  # Captura "v1.2.3", "1.2.3", "1.2.3-alpha.4"
-    ]
+        ]
+       
     }
 
 extension_to_language = {
