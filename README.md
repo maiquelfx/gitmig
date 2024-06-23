@@ -87,7 +87,7 @@ prospect()
 repo()
 ```
 > [!IMPORTANT]
-> Deve ser feito da seguinte forma: proprierário/repositório. Ex.: Google/Drive
+> Deve ser feito da seguinte forma: proprietário/repositório. Ex.: Google/Drive
 
 ### Limpar todos os arquivos na pasta de trabalho, seja local ou remota
 ```python
