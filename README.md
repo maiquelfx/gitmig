@@ -125,17 +125,17 @@ cat_class_color()
 cat_shuffle_color()
 ```
 > [!TIP]
-> Isso facilita a conferência manual de classificação dos commits 
+> Isso facilita a conferência manual de classificação dos commits.
 
-### Geração de visualização web resumida e organizada em tópicos
+### Geração de visualização web resumida e organizada em tópicos.
 ```python
 data_color_html(nome)
 ```
-### Geração de visualização local resumida e organizada em tópicos
+### Geração de visualização local resumida e organizada em tópicos.
 ```python
 data_color_txt(nome)
 ```
-### Geração de arquivo de dados contendo todos os arquivos e linguagens de programação utilizadas
+### Geração de arquivo de dados contendo todos os arquivos e linguagens de programação utilizadas.
 ```python
 lang()
 ```
@@ -143,7 +143,12 @@ lang()
 ```python
 gerar_pasta(nome)
 ```
-### Função para fazer download de todos os arquivos gerados em virtude da mineração para a máquina local
+### Geração de arquivo compactado com todos os arquivos gerados a partir de um repositório.
+```python
+creat_zip()
+```
+
+### Função para fazer download de todos os arquivos gerados em virtude da mineração para a máquina local.
 ```python
 download()
 ```
