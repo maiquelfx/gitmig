@@ -1021,6 +1021,26 @@ if __name__ == "__main__":
     print(f"Script '{nome_script}' gerado com sucesso!")
 
 
+def creat_zip():
+    conteudo = '''
+script_dir = os.path.dirname(os.path.abspath(__file__))
+folder_name = os.path.basename(script_dir)
+zip_filename = f"{folder_name}.zip"
+
+with zipfile.ZipFile(zip_filename, 'w') as zipf:
+    for root, _, files in os.walk(script_dir):
+        for file in files:
+            if file != os.path.basename(__file__) and file != zip_filename:
+                zipf.write(os.path.join(root, file),
+                           os.path.relpath(os.path.join(root, file), script_dir))
+
+print(f"Arquivo ZIP '{{zip_filename}}' criado com sucesso!")
+'''
+
+    with open('zip.py', 'w') as file:
+        file.write(conteudo)
+    print("Arquivo 'zip.py' criado com sucesso!")
+            
 def lang():
   local_path = f'/content/{nome}'  # Ajuste este caminho conforme necessário
   try:
