@@ -32,7 +32,7 @@ O registro de commits em sistemas Git é essencial no gerenciamento de projetos 
   </td>
   <td valign="top">
     <p>
-</br>[Adaptabilidade] - Como a classificação automatizada de commits em categorias, incluindo a detecção de commits sem propósito claro, pode aprimorar a qualidade e a precisão do controle de versão em projetos de desenvolvimento de software?
+</br>Como a classificação automatizada de commits em categorias, incluindo a detecção de commits sem propósito claro, pode aprimorar a qualidade e a precisão do controle de versão em projetos de desenvolvimento de software?
     </p>
   </td>
 </tr>
@@ -43,7 +43,7 @@ O registro de commits em sistemas Git é essencial no gerenciamento de projetos 
   </td>
   <td valign="top">
     <p>
-      </br>[Eficiência] - Como a análise contextual detalhada dos commits em repositórios Git pode revelar padrões e insights que podem aprimorar o gerenciamento e a qualidade dos projetos de desenvolvimento de software?
+      </br>Como a análise contextual detalhada dos commits em repositórios Git pode revelar padrões e insights que podem aprimorar o gerenciamento e a qualidade dos projetos de desenvolvimento de software?
     </p>
   </td>
 </tr>
