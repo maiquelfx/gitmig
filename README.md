@@ -219,7 +219,7 @@ graph()
 ## Apêndice D: Qualidade dos Projetos | Tabela D1 
 | Metricas                 | algorithms | autojump | ddia | FastChat | NLP-progress | OpenDevin | prophet | python-patterns | twint | typer |
 |------------------------|------------|----------|------|----------|--------------|-----------|---------|-----------------|-------|-------|
-| Tamanho do projeto     | 2.46       | 1.1      | 58.92| 49.33    | 2.22         | 46.37     | 86.01   | 7.26            | 4.77  | 2.48  |
+| Tamanho do projeto (MB)    | 2.46       | 1.1      | 58.92| 49.33    | 2.22         | 46.37     | 86.01   | 7.26            | 4.77  | 2.48  |
 | Colaboradores          | 205        | 76       | 116  | 236      | 300          | 151       | 184     | 133             | 68    | 57    |
 | Estrelas no GitHub     | 27.3k      | 16k      | 19.5k| 35.3k    | 22.4k        | 27.3k     | 18k     | 39.7k           | 15.6k | 14.7k |
 
