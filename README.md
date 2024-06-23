@@ -73,91 +73,84 @@ O registro de commits em sistemas Git é essencial no gerenciamento de projetos 
 - subprocess
 - requests
 
-```
 ## Funções
+>
+### Função para mineração de repositórios
 ```python
 prospect()
 ```
 > [!IMPORTANT]
->  Nas ponderações, caso seja relativa, é importante que soma dos pesos seja igual a 1
+>  As características do repositório, como número de estrelas e de commits estarão definidas no corpo da função. 
+
+### Definir repositório de trabalho
 ```python
-prospect()
+repo()
 ```
 > [!IMPORTANT]
-> Nas ponderações, caso seja absoluta, é importante que a soma de `Fi*Pi` seja dividida pela soma de `Pi`
+> Deve ser feito da seguinte forma: proprierário/repositório. Ex.: Google/Drive
+
+### Limpar todos os arquivos na pasta de trabalho, seja local ou remota
 ```python
-pond_comp = 1
-pond_rio = 2
-def calc():
-  return ((complexidade * pond_comp + risco * pond_prio) / (pond_comp + pond_prio))
+clear()
+```
+### Clonar repositório
+```python
+clone()
+```
+### Mineração de commits
+```python
+mining()
+```
+### Aplicar categorias em cada um dos commits minerados, adicionando uma cor para cada categoria
+```python
+cat_color(f'{nome}.xlsx', f'{nome}_class_color.xlsx')
 ```
 > [!TIP]
-> Equivalência de prioridade relativa
+> Categorias
 ```python
-peso_comp = 0.33 #peso1 1/3 -> equivale a peso 1
-peso_prio = 0.67 #peso2 2/3 -> equivale a peso 2 // x/3
+CORRECTIVE_ENGINEERING
+FORWARD_ENGINEERING
+REENGINEERING
+MANAGEMENT
+TESTS
+UNCLASSIFIED
 ```
+### Classificar commits por categoria
 ```python
-peso_comp = 0.40 #2/5 peso 2 // 0,80/2
-peso_prio = 0.60 #3/5  peso 3 'maior prioridade // 1,20/2
-```
-
-#### Para desativar um grupo, no bloco da definição dos fatores de prioridade, altera-se o valor da variável declarada `g(n)` para `0`
-```python
-# grupo 1
-complexidade=2
-risco=3
-dicio['g1'] = calc()
-qg1 = 5
-g1 = 1 #boolean, 1 para true / 2 para false
+cat_class_color()
 ```
 
-## Para rodar o Framework via Linux ou WSL
-```bash
-$ pytest -m test_file.py -v
-```
-## Para rodar o Pytest via Windows
+### Classificar commits alternando em cada categoria
 ```python
-python -m pytest -v test_unit_100.py
-```
-```python
-python -m pytest -v teste_unit_100k.py
-```
-```python
-python -m pytest -v teste_unit_base.py
-```
-## Para rodar os testes com grupos
-```python
-python -m pytest -v test_main_grupos.py
-```
-## Para rodar os testes unitários de maneira geral
-```python
-python -m pytest -v test_main_unit.py
-```
-## Para rodar 100 testes unitários priorizados
-```python
-python -m pytest -v test_unit_100.py
-```
-## Para rodar 100.000 testes unitários priorizados
-```python
-python -m pytest -v teste_unit_100k.py
-```
-## Gerar arquivo de métrica APFD
-```python
-python -m pytest -v test_arquivo > output.txt
+cat_shuffle_color()
 ```
 > [!TIP]
-> Workflows extensos estão desativados por padrão para evitar sobrecarga de tempo de execução.
-> - [x] apfd.yml [2]
-> - [ ] gerador.yml [1]
-> - [ ] pytest.yml [4]
-> - [ ] test_100k.yml [1]
+> Isso facilita a conferência manual de classificação dos commits 
 
-> [!TIP]
-> Para o APFD pode ser preciso setar a saída para UTF-8 no CMD
->```bash
->set PYTHONIOENCODING=utf-8
->````
+### Geração de visualização web resumida e organizada em tópicos
+```python
+data_color_html(nome)
+```
+### Geração de visualização local resumida e organizada em tópicos
+```python
+data_color_txt(nome)
+```
+### Geração de arquivo de dados contendo todos os arquivos e linguagens de programação utilizadas
+```python
+lang()
+```
+### Geração de pasta com o nome do repositório para mover todos os arquivos gerados para tal. 
+```python
+gerar_pasta(nome)
+```
+### Função para fazer download de todos os arquivos gerados em virtude da mineração para a máquina local
+```python
+download()
+```
+### Geração de gráfico de dispersão dinâmico, contendo commits, data, hora, local, categoria entre outras informações.
+```python
+graph()
+```
 
 ## Resultados (segundos)
 | Quantidade de Testes | Tempo de Ordenação (TP) | Testes Priorizados (TP) | Testes Sem Ordenação (TL) |
