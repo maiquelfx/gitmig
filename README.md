@@ -226,7 +226,7 @@ Claro! Vamos transformar a matriz fornecida para o formato de tabela GitHub que 
 | Colaboradores          | 205        | 76       | 116  | 236      | 300          | 151       | 184     | 133             | 68    | 57    |
 | Estrelas no GitHub     | 27.3k      | 16k      | 19.5k| 35.3k    | 22.4k        | 27.3k     | 18k     | 39.7k           | 15.6k | 14.7k |
 
-## Apêndice E: Classificação ! Tabela E1
+## Apêndice E: Classificação | Tabela E1
 | Categoria                  | Expressões / Palavras-chave                                                                                                                                                      |
 |---------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | MANAGEMENT                | explain, readme, section, directory, tidy, docs, page, adopt, bump, changelog, clean, code review, comment, copyright, documentation, document, format, formatting, dependencies, resume, integrat, javadoc, license, maintenance, manual, merge, organiz, polish, repository, docker, structure, style, TODO, upgrade, install, pystan, describe, require, note, typo, spelling, pep8, installation, recommend, set, requirements, gitignore, git, instructions, translate, Guide, updating, auto, specify, annotated, MD, .md, ignoring, ignore, numbering, merging, tweak, mark dev, mark version |
