@@ -1,0 +1,84 @@
+Repositório: autojump
+
+Tamanho do repositório: 1.11 MB
+
+Quantidade de commits por grupo:
+Classification
+FORWARD_ENGINEERING       447
+MANAGEMENT                156
+CORRECTIVE_ENGINEERING    122
+REENGINEERING              60
+RELEASES                   36
+UNCLASSIFIED               18
+TESTS                       2
+Name: count, dtype: int64
+
+Quantidade total de commits: 841
+
+Usuário que mais fez commits: William Ting
+Quantidade de commits realizados pelo usuário: 473
+
+Quantidade de usuários: 76
+
+Três dias da semana com mais commits:
+Date
+Tuesday      193
+Wednesday    145
+Thursday     119
+dtype: int64
+
+Dia do projeto com menos commits: Saturday
+Quantidade de commits realizados nesse dia: 87
+
+###################
+Probabilidade de ocorrência:
+Classification
+FORWARD_ENGINEERING       0.531510
+MANAGEMENT                0.185493
+CORRECTIVE_ENGINEERING    0.145065
+REENGINEERING             0.071344
+RELEASES                  0.042806
+UNCLASSIFIED              0.021403
+TESTS                     0.002378
+Name: count, dtype: float64
+
+Métricas salvas em: autojump_metrica.xlsx
+
+Métricas por grupo:
+Média: 0.14285714285714285
+Variância: 0.03374727940353201
+
+Desvio Padrão por grupo:
+FORWARD_ENGINEERING: 0.3886529641583149
+MANAGEMENT: 0.04263631730932563
+CORRECTIVE_ENGINEERING: 0.002208255478172244
+REENGINEERING: 0.07151350433157805
+RELEASES: 0.10005095974180397
+UNCLASSIFIED: 0.12145405129947341
+TESTS: 0.14047902157295736
+
+
+################====UNCLASSIFIED=====####################
+
+
+
+Número de commits 'UNCLASSIFIED': 18
+
+Usuário que mais fez commits 'UNCLASSIFIED': Joël Schaerer
+Quantidade de commits 'UNCLASSIFIED' realizados pelo usuário: 5
+
+Três dias da semana com mais commits 'UNCLASSIFIED':
+Date
+Thursday     5
+Tuesday      4
+Wednesday    4
+dtype: int64
+
+Dia com menos commits 'UNCLASSIFIED': Friday
+Quantidade de commits 'UNCLASSIFIED' realizados nesse dia: 1
+
+Usuário que fez o commit com maior número de alterações em arquivos: William Ting
+Quantidade de arquivos alterados: 2
+======================================================================
+Mensagem do commit (Short): Tabs to spaces.
+Mensagem do commit (Full): nan
