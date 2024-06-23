@@ -152,9 +152,6 @@ download()
 graph()
 ```
 
-##A1
-Claro! Vamos transformar a matriz fornecida para o formato de tabela GitHub que você especificou.
-
 ## Projetos selecionados:
 | Projeto         | Descrição                                                                        |
 |-----------------|----------------------------------------------------------------------------------|
